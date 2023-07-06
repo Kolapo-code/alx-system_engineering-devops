@@ -33,19 +33,19 @@ defaults
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 
-frontend  ehoneah-frontend-http
+frontend  Holb20236ipv9u-frontend-http
         bind *:80
         mode http
 	http-request set-header X-Forwarded-Proto http
-        default_backend ehoneah-backend
+        default_backend Holb20236ipv9u-backend
 
-frontend ehoneah-frontend-https
-	bind *:443 ssl crt /etc/haproxy/certs/www.ehoneah.tech.pem
+frontend Holb20236ipv9u-frontend-https
+	bind *:443 ssl crt /etc/haproxy/certs/www.Holb20236ipv9u.tech.pem
 	http-request set-header X-Forwarded-Proto https
 	http-request redirect scheme https code 301 unless { ssl_fc }
-	default_backend ehoneah-backend
+	default_backend Holb20236ipv9u-backend
 
-backend ehoneah-backend
+backend Holb20236ipv9u-backend
         balance roundrobin
-        server 63210-web-01 100.25.19.204:80 check
-        server 63210-web-02 54.157.159.85:80 check
+        server 206353-web-01 35.153.19.207:80 check
+        server 206353-web-02 54.237.122.185:80 check
